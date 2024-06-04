@@ -1,15 +1,15 @@
-def find(units):
-    ans = 0
+def find_avg(units):
+    units_cnt = 0
     units.sort(reverse=True)
     for val in range(100) :
-        cur = 0
+        cur_cnt = 0
         for i in units :
             if val>=i :
                 count = val//i
-                cur += count
+                cur_cnt += count
                 val -= i*count
-        ans += cur
-    return ans/100
+        units_cnt += cur_cnt
+    return units_cnt/100
 
 units = list(map(int,input().split()))
-print("AVG of units =",find(units))
+print("AVG of units =",find_avg(units))
