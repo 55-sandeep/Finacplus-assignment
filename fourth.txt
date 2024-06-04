@@ -1,4 +1,4 @@
-			    HIGH LEVEL DISIGN DIAGRAM
+			    HIGH LEVEL DESIGN DIAGRAM
 
 
                                +-----------------+
