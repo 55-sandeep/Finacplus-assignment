@@ -6,22 +6,22 @@ def special_cipher(text,rn):
         else:
             cipher += chr((ord(ch) + rn-65)%26 + 65)
     spe_cipher = ""
-    c = 1
+    cur_cnt = 1
     for i in range(len(cipher)-1):
         if cipher[i]==cipher[i+1] :
-            c+=1
+            cur_cnt+=1
         else:
-            if c>1 :
-                spe_cipher += cipher[i]+str(c)
+            if cur_cnt>1 :
+                spe_cipher += cipher[i]+str(cur_cnt)
             else:
                 spe_cipher += cipher[i]
-            c = 1
-    if c>1 :
-        spe_cipher += cipher[i]+str(c)
+            cur_cnt = 1
+    if cur_cnt>1 :
+        spe_cipher += cipher[i]+str(cur_cnt)
     else:
         spe_cipher += cipher[i]
     return spe_cipher
 text = input()
 rn = int(input())
-print("special cipher text for given text",text,"is")
+print("special cipher text for given text :",text,"is")
 print(special_cipher(text,rn))
